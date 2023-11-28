@@ -2,7 +2,7 @@
 This is the programming exercise for UIUC Application Developer position.
 
 ## Usage
-In Python 3.8.9 enviroment
+In Python3 (dev in 3.8.9) enviroment
 ```
 python3 readjson.py
 ```
