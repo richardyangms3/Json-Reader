@@ -387,15 +387,15 @@
             "expired or expires soon": "expires soon"
         },
         {
+            "training": "IRB Quiz",
+            "expired or expires soon": "expires soon"
+        },
+        {
             "training": "NIH Guidelines Overview",
             "expired or expires soon": "expired"
         },
         {
             "training": "NIH Guidelines Overview",
-            "expired or expires soon": "expires soon"
-        },
-        {
-            "training": "IRB Quiz",
             "expired or expires soon": "expires soon"
         }
     ],
@@ -721,19 +721,19 @@
     ],
     "Rose Boyle": [
         {
-            "training": "Working in Cold Temperatures",
+            "training": "Understanding Biosafety",
             "expired or expires soon": "expired"
         },
         {
-            "training": "Working in Cold Temperatures",
+            "training": "Understanding Biosafety",
             "expired or expires soon": "expires soon"
         },
         {
-            "training": "Understanding Biosafety",
+            "training": "Working in Cold Temperatures",
             "expired or expires soon": "expired"
         },
         {
-            "training": "Understanding Biosafety",
+            "training": "Working in Cold Temperatures",
             "expired or expires soon": "expires soon"
         }
     ],
@@ -1930,14 +1930,6 @@
         },
         {
             "training": "X-Ray Safety",
-            "expired or expires soon": "expires soon"
-        },
-        {
-            "training": "Radiation Safety Annual Refresher",
-            "expired or expires soon": "expired"
-        },
-        {
-            "training": "Radiation Safety Annual Refresher",
             "expired or expires soon": "expires soon"
         },
         {

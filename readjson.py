@@ -8,6 +8,29 @@ with open(data_path) as f:
 '''
 {'name': 'Paxton Foley', 'completions': [{'name': 'Understanding Biosafety', 'timestamp': '3/23/2022', 'expires': None}]}
 '''
+def data_preprocess():
+    hold = []
+    global data
+    for d in data:
+        record = defaultdict(list)
+        for completion in d['completions']:
+            timestamp = dt.strptime(completion['timestamp'], "%m/%d/%Y")
+            if completion['name'] in record:
+                if timestamp > record[completion['name']][0]:
+                    record[completion['name']][0] = timestamp
+                    record[completion['name']][1] = completion
+            else:
+                record[completion['name']].append(timestamp)
+                record[completion['name']].append(completion)
+        filtered_result = {}
+        filtered_result['name'] = d['name']
+        filtered_result['completions'] = []
+        for r in record.values():
+            filtered_result['completions'].append(r[1])
+        hold.append(filtered_result)
+    data = hold
+data_preprocess()
+
 def completion_count():
     c = Counter()
     # key: training, value: count
@@ -56,7 +79,7 @@ def completed_training_expired(date = '10/1/2023'):
                 dic['expired or expires soon'] = 'expires soon'
                 person2training[d['name']].append(dic)
     #print(person2training)
-    with open('task4.json', 'w+') as f:
+    with open('task3.json', 'w+') as f:
         res = json.dumps(person2training, indent=4)
         f.write(res)
 
